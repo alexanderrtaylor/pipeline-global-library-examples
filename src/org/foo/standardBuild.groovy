@@ -11,7 +11,7 @@ def dotnetapi(cfg)
     cfg.delegate = build
     cfg()
     //api = build
-    standardBuildSpec.builds[build.projectName] = build
+    builds[build.projectName] = build
 }
 
 def dotnetlib(cfg)
@@ -21,7 +21,7 @@ def dotnetlib(cfg)
     cfg.delegate = build
     cfg()
     lib = build
-    standardBuildSpec.builds[build.projectName] = build
+    builds[build.projectName] = build
 }
 
 def execute()
