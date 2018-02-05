@@ -2,6 +2,7 @@ package org.foo
 
 def api; 
 def lib;
+def builds;
 
 def dotnetapi(cfg)
 {
