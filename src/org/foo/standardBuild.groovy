@@ -16,12 +16,13 @@ def dotnetapi(cfg)
 
 def dotnetlib(cfg)
 {
+    def builds_local = builds
     def build = new dotnetlibBuild()
     cfg.resolveStrategy = Closure.DELEGATE_FIRST
     cfg.delegate = build
     cfg()
     lib = build
-    builds[build.projectName] = build
+    builds_local[build.projectName] = build
 }
 
 def execute()
