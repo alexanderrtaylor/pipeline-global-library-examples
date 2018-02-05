@@ -22,7 +22,7 @@ def dotnetlib(cfg)
     cfg.delegate = build
     cfg()
     lib = build
-    builds_local[build.projectName] = build
+    builds_local.put(build.projectName, build)
 }
 
 def execute()
